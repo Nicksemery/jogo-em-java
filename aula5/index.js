@@ -1,14 +1,27 @@
-import random from "./random";
-import verificacao from "./Verificação";
+import {random} from "../aula5/random.js";
+import {verificacao} from "../verificacao.js";
+
+function jogo(){
+    let numero_maximo = 5
+    const geradornumero = random(1,10)
 
 
-let numero_maximo = 5
-let numerorandom = random(1,10)
-let numero = prompt("Nos dê um numero entre 1 e 10: ")
-let igual = verificacao(numeroJogador, numeroaleatorio)
-let tentativas = 0
 
+    while (numero_maximo > 0){
+        let numeroJogador = parseInt(prompt("Nos dê um numero entre 1 e 10: "));
+        let verific = verificacao(numeroJogador,geradornumero);
 
-while (tentativas < 5 && igual === "igual"){
-    
+        console.log(Verific)
+
+        if (verific === "igual"){
+            break;
+        }
+
+        numero_maximo -=1;
+        if (numero_maximo === 0){
+            console.log("Você perdeu! O número era:" + numeroaleatorio)
+        }
+    }
 }
+
+jogo();

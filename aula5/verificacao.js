@@ -1,5 +1,5 @@
-function verificacao(numeroJogador, numeroaleatorio){
-    if (numuerojogador > numeroaleatorio){
+export function verificacao(numeroJogador, numeroaleatorio){
+    if (numeroJogador > numeroaleatorio){
         return "maior"
     } else if (numeroJogador < numeroaleatorio){
         return "menor"
@@ -7,5 +7,3 @@ function verificacao(numeroJogador, numeroaleatorio){
         return "igual"
     }
 }
-
-export default verificacao
